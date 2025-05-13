@@ -10,6 +10,10 @@ const renderSCSS = require('./render-scss');
 
 const watcher = chokidar.watch('src', {
     persistent: true,
+    ignoreInitial: false,
+    usePolling: true,
+    interval: 300,
+    binaryInterval: 300,
 });
 
 let READY = false;
@@ -63,6 +67,7 @@ function _processFile(filePath, watchEvent) {
 }
 
 function _handlePug(filePath, watchEvent) {
+    console.log(`### DEBUG: _handlePug called for ${filePath} with event ${watchEvent}`);
     if (watchEvent === 'change') {
         if (filePath.match(/includes/) || filePath.match(/mixins/) || filePath.match(/\/pug\/layouts\//)) {
             return _renderAllPug();

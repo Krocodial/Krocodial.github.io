@@ -8,7 +8,7 @@ html(lang='en')
         meta(name='description', content='')
         meta(name='author', content='')
 
-        title Kraaken consulting
+        title Kraak consulting 
 
         link(rel='icon', type='image/x-icon', href='assets/favicon2.png')
 
@@ -16,6 +16,8 @@ html(lang='en')
         script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
 
         // Google fonts
+        link(href='https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600&display=swap', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap', rel='stylesheet')
         link(href='https://fonts.googleapis.com/css?family=Varela+Round', rel='stylesheet')
         link(href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i', rel='stylesheet')
 
@@ -45,9 +47,10 @@ html(lang='en')
             .container.px-4.px-lg-5.d-flex.h-100.align-items-center.justify-content-center
                 .d-flex.justify-content-center
                     .text-center
-                        h1.mx-auto.my-0.text-uppercase Kraaken 
-                        h2.mx-auto.my-0 Consulting 
-                        h3.text-white-50.mx-auto.mt-2.mb-5 Comprehensive security advisory & development services for organizations of every size
+                        h1.mx-auto.my-0.text-uppercase Kraak Consulting
+                        h2.mx-auto.my-0.text-uppercase Cybersecurity services
+                        h3.text-white-50.mx-auto.mt-2.mb-5
+                            | Security threat risk assessments, application security, and secure software development for modern organizations.
                         a.btn.btn-primary(href='#about') Learn more
 
         // About
@@ -55,10 +58,10 @@ html(lang='en')
             .container.px-4.px-lg-5
                 .row.gx-4.gx-lg-5.justify-content-center
                     .col-lg-8
-                        h2.text-white.mb-4 Results driven software solutions
+                        h2.text-white.mb-4 Practical Security Expertise
                         p.text-white-50
-                            | We prioritize client-centric development, with proven experience building enterprise software solutions to help organization achieve modern security maturity standards.
-                            | Our risk assessment methodology is comprehensive; taking after the STRIDE approach envisioned by Microsoft.
+                            | I help organizations identify, understand, and reduce cyber risk. With hands-on experience in secure software development and application security, I deliver actionable advice and technical solutions tailored to your needs. 
+                            | Whether you need a security assessment, code review, or guidance integrating security into your SDLC, I provide clear, direct support—no jargon, just results.
                 //img.img-fluid(src='assets/img/harddrive.jpg', alt='...')
 
         // Projects
@@ -67,42 +70,34 @@ html(lang='en')
                 // Featured Project Row
                 .row.gx-0.mb-4.mb-lg-5.align-items-center
                     .col-xl-8.col-lg-7
-                        img.img-fluid.mb-3.mb-lg-0(src='assets/img/wave.jpg', alt='...')
+                        img.img-fluid.mb-3.mb-lg-0(src='assets/img/wave.jpg', alt='Cybersecurity risk assessment')
                     .col-xl-4.col-lg-5
                         .featured-text.text-center.text-lg-left
-                            h4 Security Threat and Risk Assessments
+                            h4 Security Threat & Risk Assessments
                             p.text-black-50.mb-0
-                                | Our seasoned analysts collaborate closely with your development teams and business units to thorougly assess the potential risks your software solutions may encounter. 
-                                | Our focus extends beyond mere identification; we provide actionable guidance on effective risk mitigation strategies, empowering your organization to fortify its defenses against malicious threats. 
-                                | By partnering with us, you not only safeguard your digital assets but also enhance your resilience in an ever-evolving threat landscape.
+                                | Identify vulnerabilities and threats in your environment. I provide clear, actionable reports and practical remediation steps—no fluff, just what matters.
                 // Project One Row
                 .row.gx-0.mb-5.mb-lg-0.justify-content-center
                     .col-lg-6
-                        img.img-fluid(src='assets/img/computer.jpg', alt='...')
+                        img.img-fluid(src='assets/img/computer.jpg', alt='Application security consulting')
                     .col-lg-6
                         .bg-black.text-center.h-100.project
                             .d-flex.h-100
                                 .project-text.w-100.my-auto.text-center.text-lg-left
-                                    h4.text-white Secure Application Development Guidance
+                                    h4.text-white Application Security Consulting
                                     p.mb-0.text-white-50
-                                        | We specialize in integrating security tools into CI/CD pipelines for enhanced software development security. 
-                                        | Our services include assessing current processes, selecting and integrating appropriate security tools, and automating security checks throughout the pipeline. 
-                                        | We also provide training, compliance support, and continuous improvement to ensure your organization maintains robust security while optimizing development efficiency. 
-                                        | With our expertise, you can confidently accelerate your software delivery while mitigating security risks effectively.
+                                        | Secure your software from the start. I help you build, review, and improve applications with a focus on real-world security, code quality, and compliance.
                 // Project Two Row
                 .row.gx-0.justify-content-center
                     .col-lg-6
-                        img.img-fluid(src='assets/img/harddrive.jpg', alt='...')
+                        img.img-fluid(src='assets/img/harddrive.jpg', alt='Secure software development')
                     .col-lg-6.order-lg-first
                         .bg-black.text-center.h-100.project
                             .d-flex.h-100
                                 .project-text.w-100.my-auto.text-center.text-lg-right
-                                    h4.text-white Security Software Development
+                                    h4.text-white Secure Software Development
                                     p.mb-0.text-white-50
-                                        | We offer a suite of advanced security solutions designed to address critical needs such as network visibility, data classification, and holistic vulnerability detection. 
-                                        | Our network visibility tools offer real-time insights into network traffic, enabling proactive threat detection and response. 
-                                        | With our data classification solutions, you can efficiently categorize and protect sensitive information, ensuring compliance with regulatory requirements and safeguarding against data breaches. 
-                                        | Additionally, our holistic vulnerability detection platform operates from a centralized plane, continuously scanning your infrastructure for vulnerabilities and providing actionable insights to fortify your defenses.
+                                        | From architecture to deployment, I deliver secure, maintainable code and help you integrate security best practices into your development lifecycle.
 
         // Signup
         section#signup.signup-section
@@ -110,91 +105,63 @@ html(lang='en')
                 .row.gx-4.gx-lg-5
                     .col-md-10.col-lg-8.mx-auto.text-center
                         i.far.fa-paper-plane.fa-2x.mb-2.text-white
-                        h2.text-white.mb-5 Connect With Us
-
-                        // * * * * * * * * * * * * * * *
-                        // * * SB Forms Contact Form * *
-                        // * * * * * * * * * * * * * * *
-
-                        // This form is pre-integrated with SB Forms.
-                        // To make this form functional, sign up at
-                        // https://startbootstrap.com/solution/contact-forms
-                        // to get an API token!
-                        
-                        form#contactForm.form-signup(data-sb-form-api-token='40131ed5-546a-451c-ace9-81e4c889d074')
-
-                            // Email address input
-
+                        h2.text-white.mb-5 Get in Touch
+                        p.text-white-50.mb-4
+                            | Ready to improve your security posture or need advice on a project? Reach out for a free consultation or just to chat about your security needs.
+                        form.form-signup(method='POST', action='https://formsubmit.co/contact@kraak.ca')
                             .row.input-group-newsletter
                                 .col
                                     input#emailAddress.form-control(
                                         type='email',
-                                        placeholder='Enter email address...',
-                                        aria-label='Enter email address...',
-                                        data-sb-validations='required,email'
+                                        name='email',
+                                        placeholder='Enter your email address...',
+                                        aria-label='Enter your email address...',
+                                        required=true
                                     )
                                 .col-auto
-                                    button#submitButton.btn.btn-primary.disabled(type='submit') Notify Me!
-                            .invalid-feedback.mt-2(data-sb-feedback='emailAddress:required')
-                                | An email is required.
-                            .invalid-feedback.mt-2(data-sb-feedback='emailAddress:email')
-                                | Email is not valid.
-
-                            // Submit success message
-                            //
-                            // This is what your users will see when the form
-                            // has successfully submitted
-
-                            #submitSuccessMessage.d-none
-                                .text-center.mb-3.mt-2.text-white
-                                    .fw-bolder Form submission successful!
-                                    
-                            // Submit error message
-                            //
-                            // This is what your users will see when there is
-                            // an error submitting the form
-
-                            #submitErrorMessage.d-none
-                                .text-center.text-danger.mb-3.mt-2 Error sending message!
+                                    button#submitButton.btn.btn-primary(type='submit') Contact Me
+                            .form-group.mt-3
+                                textarea.form-control(name='message', rows='4', placeholder='Your message...', required=true)
+                            input(type='hidden', name='_captcha', value='false')
+                            input(type='hidden', name='_next', value='https://kraak.ca/thanks.html')
 
         // Contact
         section.contact-section.bg-black
             .container.px-4.px-lg-5
                 .row.gx-4.gx-lg-5
-                    .col-md-6.mb-3.mb-md-0
+                    .col-md-4.mb-3.mb-md-0
                         .card.py-4.h-100
                             .card-body.text-center
                                 i.fas.fa-map-marked-alt.text-primary.mb-2
-                                h4.text-uppercase.m-0 Address
+                                h4.text-uppercase.m-0 Location
                                 hr.my-4.mx-auto
-                                .small.text-black-50 Victoria BC, Canada
-                    .col-md-6.mb-3.mb-md-0
-                        .card.py-4.h-100
-                            .card-body.text-center
-                                i.fas.fa-envelope.text-primary.mb-2
-                                h4.text-uppercase.m-0 Email
-                                hr.my-4.mx-auto
-                                .small.text-black-50
-                                    a(href='mailto:contact@kraak.ca') contact@kraak.ca
-                    //.col-md-4.mb-3.mb-md-0
-                        .card.py-4.h-100
-                            .card-body.text-center
-                                i.fas.fa-mobile-alt.text-primary.mb-2
-                                h4.text-uppercase.m-0 Phone
-                                hr.my-4.mx-auto
-                                .small.text-black-50 +1 (555) 902-8832
-                .social.d-flex.justify-content-center
-                    a.mx-2(href='#!')
-                        i.fab.fa-twitter
-                    a.mx-2(href='#!')
-                        i.fab.fa-facebook-f
-                    a.mx-2(href='#!')
-                        i.fab.fa-github
+                                .small.text-black-50 Victoria, BC, Canada
+                    .col-md-4.mb-3.mb-md-0
+                        a(href='https://github.com/Krocodial', target='_blank', style='text-decoration: none;')
+                            .card.py-4.h-100
+                                .card-body.text-center
+                                    i.fab.fa-github.text-primary.mb-2
+                                    h4.text-uppercase.m-0 GitHub
+                                    hr.my-4.mx-auto
+                    .col-md-4.mb-3.mb-md-0
+                        a(href='https://www.linkedin.com/in/your-linkedin/', target='_blank', style='text-decoration: none;')
+                            .card.py-4.h-100
+                                .card-body.text-center
+                                    i.fab.fa-linkedin.text-primary.mb-2
+                                    h4.text-uppercase.m-0 LinkedIn
+                                    hr.my-4.mx-auto
+
+        // Cyber Attack Feed
+        section#cyber-feed.bg-dark.text-white.py-5
+            .container.px-4.px-lg-5
+                h3.mb-4.text-center Latest Cybersecurity Headlines
+                #cyber-attack-feed.text-center
+                    p.mb-0 Loading latest news from top sources...
 
         // Footer
         footer.footer.bg-black.small.text-center.text-white-50
             .container.px-4.px-lg-5
-                | Copyright &copy; Kraaken corp. 2024
+                | Copyright © Kraak Consulting 2025
 
         // Bootstrap core JS
         script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
@@ -202,9 +169,35 @@ html(lang='en')
         // Core theme JS
         script(src='js/scripts.js')
 
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-        // * *                               SB Forms JS                               * *
-        // * * Activate your form at https://startbootstrap.com/solution/contact-forms * *
-        // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+        // Cyber Attack Feed JS
+        script.
+            async function fetchSingleFeed(rssUrl, sourceName) {
+                try {
+                    const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`);
+                    if (!res.ok) throw new Error('API error');
+                    const data = await res.json();
+                    if (data && data.items && data.items.length > 0) {
+                        const item = data.items[0];
+                        return `<div class='mb-2 text-start'><a href='${item.link}' target='_blank' class='text-white fw-bold'>${item.title}</a><br><small class='text-secondary'>${sourceName} &middot; ${new Date(item.pubDate).toLocaleString()}</small></div>`;
+                    } else {
+                        return `<div class='mb-2 text-start text-secondary'>No recent news from ${sourceName}.</div>`;
+                    }
+                } catch (e) {
+                    return `<div class='mb-2 text-start text-secondary'>Unable to load ${sourceName} feed.</div>`;
+                }
+            }
+            async function fetchAllCyberFeeds() {
+                const feed = document.getElementById('cyber-attack-feed');
+                feed.innerHTML = 'Loading latest news from top sources...';
+                const feeds = [
+                    { url: 'https://krebsonsecurity.com/feed/', name: 'Krebs on Security' },
+                    { url: 'https://thehackernews.com/rss.xml', name: 'The Hacker News' },
+                    { url: 'https://www.bleepingcomputer.com/feed/', name: 'BleepingComputer' },
+                    { url: 'https://www.darkreading.com/rss.xml', name: 'Dark Reading' }
+                ];
+                const results = await Promise.all(feeds.map(f => fetchSingleFeed(f.url, f.name)));
+                feed.innerHTML = results.join('');
+            }
+            fetchAllCyberFeeds();
 
         script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
