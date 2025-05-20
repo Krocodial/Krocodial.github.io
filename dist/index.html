@@ -6,7 +6,7 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Kraak consulting</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon2.png" />
+        <link rel="icon" type="image/x-icon" href="assets/fingerprint.png" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Google fonts-->
@@ -22,7 +22,7 @@
         <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="#page-top"></a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="#navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
@@ -31,7 +31,7 @@
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#cyber-feed">Cyber Feed</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#cyber-feed">Security News</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">Kraak Consulting</h1>
                         <h2 class="mx-auto my-0 text-uppercase">Cybersecurity services</h2>
-                        <h3 class="text-white-50 mx-auto mt-2 mb-5">Security threat risk assessments, application security, and secure software development for modern organizations.</h3>
+                        <h3 class="text-white-50 mx-auto mt-2 mb-5">Security risk assessments, application security, and tailored security solutions for every organization.</h3>
                         <a class="btn btn-primary" href="#about">Learn more</a>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                         <p class="text-white-50 mb-4">Ready to improve your security posture or need advice on a project? Reach out for a free consultation or just to chat about your security needs.</p>
                         <form class="form-signup" method="POST" action="https://formsubmit.co/contact@kraak.ca">
                             <div class="row input-group-newsletter">
-                                <div class="col"><input class="form-control" id="emailAddress" type="email" name="email" placeholder="Enter your email address..." aria-label="Enter your email address..." required /></div>
+                                <div class="col"><input class="form-control" id="emailAddress" type="email" name="email" placeholder="Enter your email address..." aria-label="Enter your email address..." required style="text-transform: none" /></div>
                                 <div class="col-auto"><button class="btn btn-primary" id="submitButton" type="submit">Contact Me</button></div>
                             </div>
                             <div class="form-group mt-3"><textarea class="form-control" name="message" rows="4" placeholder="Your message..." required></textarea></div>
@@ -125,52 +125,23 @@
                 </div>
             </div>
         </section>
-        <!-- Contact-->
-        <section class="contact-section bg-black">
+        <!-- Black break between Signup and Cyber Feed-->
+        <div class="section-break"></div>
+        <!-- Cyber Attack Feed-->
+        <section class="cyber-feed-section bg-black text-white py-5" id="cyber-feed">
             <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Location</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">Victoria, BC, Canada</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <a href="https://github.com/Krocodial" target="_blank" style="text-decoration: none">
-                            <div class="card py-4 h-100">
-                                <div class="card-body text-center">
-                                    <i class="fab fa-github text-primary mb-2"></i>
-                                    <h4 class="text-uppercase m-0">GitHub</h4>
-                                    <hr class="my-4 mx-auto" />
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <a href="https://www.linkedin.com/in/your-linkedin/" target="_blank" style="text-decoration: none">
-                            <div class="card py-4 h-100">
-                                <div class="card-body text-center">
-                                    <i class="fab fa-linkedin text-primary mb-2"></i>
-                                    <h4 class="text-uppercase m-0">LinkedIn</h4>
-                                    <hr class="my-4 mx-auto" />
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                <h2 class="text-white mb-4 text-center">Latest cybersecurity news</h2>
+                <div class="mt-5 text-center" id="cyber-attack-feed"><p class="mb-0">Loading latest news from top sources...</p></div>
             </div>
         </section>
-        <!-- Spacer before Cyber Attack Feed-->
-        <div class="w-100 d-block" style="height: 3rem; min-height: 3rem; background: #000 !important; margin: 0; padding: 0; border: 0"></div>
-        <!-- Cyber Attack Feed-->
-        <section class="bg-dark text-white py-5" id="cyber-feed">
-            <div class="container px-4 px-lg-5">
-                <h3 class="mb-4 text-center">Latest Cybersecurity Headlines</h3>
-                <div class="text-center" id="cyber-attack-feed"><p class="mb-0">Loading latest news from top sources...</p></div>
+        <!-- Contact-->
+        <section class="contact-section bg-black">
+            <div class="container px-3 px-lg-5">
+                <div class="row gx-4 gx-lg-5"></div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="https://www.linkedin.com/in/louiskraak"><i class="fab fa-linkedin"></i></a>
+                    <a class="mx-2" href="https://github.com/Krocodial"><i class="fab fa-github"></i></a>
+                </div>
             </div>
         </section>
         <!-- Footer-->
@@ -180,47 +151,7 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <!-- Cyber Attack Feed JS-->
-        <script>
-            async function fetchSingleFeed(rssUrl, sourceName, count) {
-                try {
-                    const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`);
-                    if (!res.ok) throw new Error('API error');
-                    const data = await res.json();
-                    if (data && data.items && data.items.length > 0) {
-                        return data.items.slice(0, count).map((item) => ({
-                            title: item.title,
-                            link: item.link,
-                            pubDate: item.pubDate,
-                            source: sourceName,
-                        }));
-                    } else {
-                        return [];
-                    }
-                } catch (e) {
-                    return [];
-                }
-            }
-            async function fetchAllCyberFeeds() {
-                const feed = document.getElementById('cyber-attack-feed');
-                feed.innerHTML = 'Loading latest news from top sources...';
-                const feeds = [
-                    { url: 'https://krebsonsecurity.com/feed/', name: 'Krebs on Security', count: 4 },
-                    { url: 'https://thehackernews.com/rss.xml', name: 'The Hacker News', count: 4 },
-                    { url: 'https://www.bleepingcomputer.com/feed/', name: 'BleepingComputer', count: 4 },
-                    { url: 'https://www.darkreading.com/rss.xml', name: 'Dark Reading', count: 4 },
-                ];
-                // Fetch all articles from all feeds
-                const results = await Promise.all(feeds.map((f) => fetchSingleFeed(f.url, f.name, f.count)));
-                // Flatten and sort by date descending
-                const allArticles = results.flat().sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
-                if (allArticles.length === 0) {
-                    feed.innerHTML = '<div class="mb-2 text-start text-secondary">No recent news found.</div>';
-                    return;
-                }
-                feed.innerHTML = allArticles.map((item) => `<div class='mb-2 text-start'><a href='${item.link}' target='_blank' class='text-white fw-bold'>${item.title}</a><br><small class='text-secondary'>${item.source} &middot; ${new Date(item.pubDate).toLocaleString()}</small></div>`).join('');
-            }
-            fetchAllCyberFeeds();
-        </script>
+        <script src="js/cyber-feed.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>

@@ -10,7 +10,7 @@ html(lang='en')
 
         title Kraak consulting 
 
-        link(rel='icon', type='image/x-icon', href='assets/favicon2.png')
+        link(rel='icon', type='image/x-icon', href='assets/fingerprint.png')
 
         // Font Awesome icons (free version)
         script(src='https://use.fontawesome.com/releases/v6.3.0/js/all.js', crossorigin='anonymous')
@@ -30,7 +30,7 @@ html(lang='en')
         nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
             .container.px-4.px-lg-5
                 a.navbar-brand(href='#page-top') 
-                button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+                button.navbar-toggler.navbar-toggler-right(type='button', data-bs-toggle='collapse', data-bs-target='#navbarResponsive', aria-controls='#navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
                     | Menu
                     i.fas.fa-bars
                 #navbarResponsive.collapse.navbar-collapse
@@ -42,7 +42,7 @@ html(lang='en')
                         li.nav-item
                             a.nav-link(href='#signup') Contact
                         li.nav-item
-                            a.nav-link(href='#cyber-feed') Cyber Feed
+                            a.nav-link(href='#cyber-feed') Security News
 
         // Masthead
         header.masthead
@@ -52,7 +52,7 @@ html(lang='en')
                         h1.mx-auto.my-0.text-uppercase Kraak Consulting
                         h2.mx-auto.my-0.text-uppercase Cybersecurity services
                         h3.text-white-50.mx-auto.mt-2.mb-5
-                            | Security threat risk assessments, application security, and secure software development for modern organizations.
+                            | Security risk assessments, application security, and tailored security solutions for every organization.
                         a.btn.btn-primary(href='#about') Learn more
 
         // About
@@ -118,7 +118,8 @@ html(lang='en')
                                         name='email',
                                         placeholder='Enter your email address...',
                                         aria-label='Enter your email address...',
-                                        required=true
+                                        required=true,
+                                        style='text-transform: none;'
                                     )
                                 .col-auto
                                     button#submitButton.btn.btn-primary(type='submit') Contact Me
@@ -127,41 +128,26 @@ html(lang='en')
                             input(type='hidden', name='_captcha', value='false')
                             input(type='hidden', name='_next', value='https://kraak.ca/thanks.html')
 
-        // Contact
-        section.contact-section.bg-black
-            .container.px-4.px-lg-5
-                .row.gx-4.gx-lg-5
-                    .col-md-4.mb-3.mb-md-0
-                        .card.py-4.h-100
-                            .card-body.text-center
-                                i.fas.fa-map-marked-alt.text-primary.mb-2
-                                h4.text-uppercase.m-0 Location
-                                hr.my-4.mx-auto
-                                .small.text-black-50 Victoria, BC, Canada
-                    .col-md-4.mb-3.mb-md-0
-                        a(href='https://github.com/Krocodial', target='_blank', style='text-decoration: none;')
-                            .card.py-4.h-100
-                                .card-body.text-center
-                                    i.fab.fa-github.text-primary.mb-2
-                                    h4.text-uppercase.m-0 GitHub
-                                    hr.my-4.mx-auto
-                    .col-md-4.mb-3.mb-md-0
-                        a(href='https://www.linkedin.com/in/your-linkedin/', target='_blank', style='text-decoration: none;')
-                            .card.py-4.h-100
-                                .card-body.text-center
-                                    i.fab.fa-linkedin.text-primary.mb-2
-                                    h4.text-uppercase.m-0 LinkedIn
-                                    hr.my-4.mx-auto
-
-        // Spacer before Cyber Attack Feed
-        .w-100.d-block(style='height: 3rem; min-height: 3rem; background: #000 !important; margin: 0; padding: 0; border: 0;')
+        // Black break between Signup and Cyber Feed
+        .section-break
 
         // Cyber Attack Feed
-        section#cyber-feed.bg-dark.text-white.py-5
+        section#cyber-feed.cyber-feed-section.bg-black.text-white.py-5
             .container.px-4.px-lg-5
-                h3.mb-4.text-center Latest Cybersecurity Headlines
-                #cyber-attack-feed.text-center
+                h2.text-white.mb-4.text-center Latest cybersecurity news
+                #cyber-attack-feed.mt-5.text-center
                     p.mb-0 Loading latest news from top sources...
+
+        
+        // Contact
+        section.contact-section.bg-black
+            .container.px-3.px-lg-5
+                .row.gx-4.gx-lg-5
+                .social.d-flex.justify-content-center
+                    a.mx-2(href='https://www.linkedin.com/in/louiskraak')
+                        i.fab.fa-linkedin
+                    a.mx-2(href='https://github.com/Krocodial')
+                        i.fab.fa-github
 
         // Footer
         footer.footer.bg-black.small.text-center.text-white-50
@@ -175,47 +161,5 @@ html(lang='en')
         script(src='js/scripts.js')
 
         // Cyber Attack Feed JS
-        script.
-            async function fetchSingleFeed(rssUrl, sourceName, count) {
-                try {
-                    const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`);
-                    if (!res.ok) throw new Error('API error');
-                    const data = await res.json();
-                    if (data && data.items && data.items.length > 0) {
-                        return data.items.slice(0, count).map(item => ({
-                            title: item.title,
-                            link: item.link,
-                            pubDate: item.pubDate,
-                            source: sourceName
-                        }));
-                    } else {
-                        return [];
-                    }
-                } catch (e) {
-                    return [];
-                }
-            }
-            async function fetchAllCyberFeeds() {
-                const feed = document.getElementById('cyber-attack-feed');
-                feed.innerHTML = 'Loading latest news from top sources...';
-                const feeds = [
-                    { url: 'https://krebsonsecurity.com/feed/', name: 'Krebs on Security', count: 4 },
-                    { url: 'https://thehackernews.com/rss.xml', name: 'The Hacker News', count: 4 },
-                    { url: 'https://www.bleepingcomputer.com/feed/', name: 'BleepingComputer', count: 4 },
-                    { url: 'https://www.darkreading.com/rss.xml', name: 'Dark Reading', count: 4 }
-                ];
-                // Fetch all articles from all feeds
-                const results = await Promise.all(feeds.map(f => fetchSingleFeed(f.url, f.name, f.count)));
-                // Flatten and sort by date descending
-                const allArticles = results.flat().sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
-                if (allArticles.length === 0) {
-                    feed.innerHTML = '<div class="mb-2 text-start text-secondary">No recent news found.</div>';
-                    return;
-                }
-                feed.innerHTML = allArticles.map(item =>
-                    `<div class='mb-2 text-start'><a href='${item.link}' target='_blank' class='text-white fw-bold'>${item.title}</a><br><small class='text-secondary'>${item.source} &middot; ${new Date(item.pubDate).toLocaleString()}</small></div>`
-                ).join('');
-            }
-            fetchAllCyberFeeds();
-
+        script(src='js/cyber-feed.js')
         script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
