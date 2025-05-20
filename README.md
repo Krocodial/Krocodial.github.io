@@ -1,4 +1,4 @@
-# Kraak Consulting Website
+# Krocodial's Custom Website
 
 This is the source code for the Kraak Consulting website, a modern, responsive one-page site built with Pug, SCSS, and Bootstrap 5. It features:
 
