@@ -13,3 +13,14 @@
     background-attachment: scroll;
     background-size: cover;
 }
+
+.thanks-bg {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%),
+    url('../assets/img/stars.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
